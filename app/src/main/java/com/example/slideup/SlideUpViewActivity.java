@@ -37,6 +37,7 @@ public class SlideUpViewActivity extends AppCompatActivity {
                 }
                 toast = Toast.makeText(SlideUpViewActivity.this, "click", Toast.LENGTH_SHORT);
                 toast.show();
+                slideUp.hide();
             }
         });
         dim = findViewById(R.id.dim);

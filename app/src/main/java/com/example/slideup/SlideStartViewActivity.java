@@ -25,7 +25,7 @@ public class SlideStartViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slide_start_view);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         sliderView = findViewById(R.id.slideView);
@@ -37,10 +37,12 @@ public class SlideStartViewActivity extends AppCompatActivity {
                 }
                 toast = Toast.makeText(SlideStartViewActivity.this, "click", Toast.LENGTH_SHORT);
                 toast.show();
+
+                slideUp.hide();
             }
         });
         dim = findViewById(R.id.dim);
-        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab = findViewById(R.id.fab);
 
         slideUp = new SlideUpBuilder(sliderView)
                 .withListeners(new SlideUp.Listener.Events() {
